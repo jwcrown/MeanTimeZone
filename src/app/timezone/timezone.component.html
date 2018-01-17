@@ -1,0 +1,16 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<body class="text-center">
+  <div class="jumbotron">
+    <h1>US Time Zone Display</h1>
+  </div>
+  <button [ngClass] = "{'selected': ('PST'== zone)}" (click)="onButtonClick('PST')">PST</button>
+  <button [ngClass] = "{'selected': ('MST'== zone)}" (click)="onButtonClick('MST')">MST</button>
+  <button [ngClass] = "{'selected': ('CST'== zone)}" (click)="onButtonClick('CST')">CST</button>
+  <button [ngClass] = "{'selected': ('EST'== zone)}" (click)="onButtonClick('EST')">EST</button>
+  <button [ngClass] = "{'selected': ('Clear'== zone)}" (click)="onButtonClick('Clear')">Clear</button>
+  <br>
+  <br>
+  <br>
+  <h2>{{ time | date:'medium' :zone }}</h2>
+</body>
+
